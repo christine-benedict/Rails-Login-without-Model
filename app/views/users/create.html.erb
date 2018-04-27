@@ -1,0 +1,50 @@
+<h1>Registration</h1>
+
+<form action="/users/confirm" method= "post">
+    <label for="fullname">Full Name: </label>
+    <input type="text" name="fullname" /><br />
+    <label for="address">Address: </label>
+    <input type="text" name="address" /><br />
+    <label for="city">City: </label>
+    <input type="text" name="city" /><br />
+    <label for="state">State: </label>
+    <input type="text" name="state" /><br />
+    <label for="zip">Zip: </label>
+    <input type="number" name="zip" /><br />
+    <label for="country">Country: </label>
+    <input type="text" name="country" /><br />
+    <label for="email">Email: </label>
+    <input type="email" name="email" /><br />
+    <label for="phone">Phone: </label>
+    <input type="tel" name="phone" /><br />
+    <label for="userid">User ID: </label>
+    <input type="text" name="userid" required/><br />
+    <label for="password">Password: </label>
+    <input type="password" name="password" required/><br />
+    <input type="submit" value="Register" />
+</form>
+
+
+<!-- <%= form_tag('/', method:"post") do %>
+    <%= label_tag(:fullname, "Full Name:") %>
+    <%= text_field_tag(:fullname) %><br />
+    <%= label_tag(:address, "Address:") %>
+    <%= text_field_tag(:address) %><br />
+    <%= label_tag(:city, "City:") %>
+    <%= text_field_tag(:city) %><br />
+    <%= label_tag(:state, "State:") %>
+    <%= text_field_tag(:state) %><br />
+    <%= label_tag(:zip, "Zip Code:") %>
+    <%= number_field(:user, :zip) %><br />
+    <%= label_tag(:country, "Country:") %>
+    <%= text_field_tag(:country) %><br />
+    <%= label_tag(:email, "Email:") %>
+    <%= email_field(:user, :email) %><br />
+    <%= label_tag(:phone, "Phone Number:") %>
+    <%= telephone_field(:user, :phone) %><br />
+    <%= label_tag(:username, "User Name:") %>
+    <%= text_field_tag(:username) %><br />
+    <%= label_tag(:password, "Password:") %>
+    <%= password_field_tag(:password) %><br />
+    <%= submit_tag("Register") %>
+<% end %> -->
