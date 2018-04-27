@@ -7,8 +7,4 @@
 </form>
 <h3><%=@error%></h3>
 Or register for an account here:
-<form action= '/users/create' method='get'>
-    <input type="submit" value="Register" />
-</form>
-
-<%= link_to("/users/create", "Register") %>
+<%= link_to("Register", "/users/create") %>
