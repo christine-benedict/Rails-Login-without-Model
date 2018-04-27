@@ -1,5 +1,7 @@
 <h1>Registration</h1>
-
+<p>
+    <%= @registererror %>
+</p>
 <form action="/users/confirm" method= "post">
     <label for="fullname">Full Name: </label>
     <input type="text" name="fullname" /><br />

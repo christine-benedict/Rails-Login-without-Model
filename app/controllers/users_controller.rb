@@ -2,14 +2,16 @@ class UsersController < ApplicationController
 
 
   def confirm
-      @user = User.new(params[:fullname], params[:address], params[:city], params[:state], params[:zip], params[:country], params[:email], params[:phone], params[:userid], params[:password])
-      cookies[:user] = @user
-      cookies[:userid] = params[:userid]
-      cookies[:password] = params[:password]
-      p cookies[:user]
-
-      # @user = YAML.load(session[:user])
-      # render 'confirm'
+      if cookies[:userid] != params[:userid]
+          @user = User.new(params[:fullname], params[:address], params[:city], params[:state], params[:zip], params[:country], params[:email], params[:phone], params[:userid], params[:password])
+          cookies[:user] = @user
+          cookies[:userid] = params[:userid]
+          cookies[:password] = params[:password]
+          p cookies[:user]
+      else
+          @registererror = "UserID already exists"
+          render '/users/create'
+      end
   end
 
   def login
